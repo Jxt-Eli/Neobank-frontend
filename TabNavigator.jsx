@@ -1,11 +1,11 @@
 
 import HomeScreen from "./homescreen";
 import StatisticsScreen from "./Statistics";
-import Login from "./login";
+import Login from "./Login";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Profile from "./Profile";
 import { Ionicons, AntDesign } from '@expo/vector-icons';
-import StackNavigator from "./StackNavigator";
+import { StackNavigator } from "./StackNavigator";
 
 
 const Tab = createBottomTabNavigator(); 
@@ -15,7 +15,7 @@ export default function TabNavigator() {
     return (
         <Tab.Navigator>
             <Tab.Screen 
-                name="HomeMain" 
+                name="Home" 
                 component={StackNavigator} 
                 options={{
                     tabBarIcon: ({ color, size })  => (

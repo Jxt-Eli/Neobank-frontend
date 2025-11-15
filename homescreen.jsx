@@ -1,16 +1,15 @@
-import React from "react";
-import { View, Text, TouchableOpacity, ScrollView, Pressable } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { useState } from "react";
 import styles from "./HomeScreenStyle";
-import { createComponentForStaticNavigation } from "@react-navigation/native";
 import DepositScreen from "./DepositScreen";
+import { StatusBar } from 'expo-status-bar';
 
 
 const QuickActionButtons = ({name, onPress}) => {
     return (
-        <Pressable style={styles.actionButton2}>
-            <Text style={styles.actionButtonText} onPress={onPress}>{name}</Text>
-        </Pressable>
+        <TouchableOpacity style={styles.actionButton2} onPress={onPress}>
+            <Text style={styles.actionButtonText} >{name}</Text>
+        </TouchableOpacity>
     );
 };
 
@@ -33,7 +32,10 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.container}>
             <View style={styles.upperContainer}>
             <Text style={styles.welcome}>Dashboard</Text>
-            <TouchableOpacity style={styles.circleButton}>
+            <TouchableOpacity 
+                style={styles.circleButton}
+                onPress={() => navigation.navigate('Auth')}
+                >
                 <Text>+</Text>
             </TouchableOpacity>
             </View>
@@ -64,6 +66,7 @@ export default function HomeScreen({ navigation }) {
                 </View>
                 <Text style={styles.seeMoreText}> see more </Text>
             </ScrollView>
+            <StatusBar style="auto" />
         </View>
     )
 };
