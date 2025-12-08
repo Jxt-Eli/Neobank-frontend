@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AuthNavigator from "./authNavigator";
 import TabNavigator from "./TabNavigator";
 import { useState } from "react";
-import { StackNavigator } from "./StackNavigator";
 
 
 
@@ -20,7 +19,7 @@ export default function RootNavigator() {
 
                 <Stack.Screen name='App Screens' component={TabNavigator} />
             ) : (
-                <Stack.Screen name='Auth Screens' >
+                <Stack.Screen name='Auth Screens'>
                     {() => <AuthNavigator setAuthd={setAuthd} />}
                 </Stack.Screen>
 

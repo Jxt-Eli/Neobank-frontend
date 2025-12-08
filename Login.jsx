@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 import { AuthButtons } from './authscreen';
 import styles from './credstyles';  
-import setAuthd from './RootNavigator'; 
 
 
 
 export default function Login({ navigation, setAuthd }) {
+  console.log("setAuthd is", setAuthd)
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,7 @@ export default function Login({ navigation, setAuthd }) {
   
   
   const handleLogin = () => {
-    if (email === '' || password === '') {
+    if (email === "" || password === "") {
         setStatus("Please fill all fields");
         return;
     }
@@ -30,7 +30,7 @@ export default function Login({ navigation, setAuthd }) {
 
   return (
     <View style={styles.container}>
-    {/* <Text style={styles.title}>Login</Text>   */}
+    {/* <Text style={styles.title}>Login</Text>*/}
 
       <TextInput 
         placeholder='Email'
