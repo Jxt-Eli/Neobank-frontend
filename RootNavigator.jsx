@@ -1,3 +1,4 @@
+/*ROOT NAVIGATOR FILE*/
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AuthNavigator from "./authNavigator";
 import TabNavigator from "./TabNavigator";

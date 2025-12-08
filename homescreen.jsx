@@ -64,7 +64,9 @@ export default function HomeScreen({ navigation }) {
                     </TouchableOpacity>
                 ))}
                 </View>
-                <Text style={styles.seeMoreText}> see more </Text>
+                <TouchableOpacity onPress={() => navigation.navigate("Transactions")}>
+                <Text style={styles.seeMoreText} > see more </Text>
+                </TouchableOpacity>
             </ScrollView>
             <StatusBar style="auto" />
         </View>

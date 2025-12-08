@@ -7,4 +7,4 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     }
 });
-export default styles
+export default styles; 

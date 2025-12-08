@@ -1,3 +1,4 @@
+/*Auth Navigator*/
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Auth from "./authscreen";

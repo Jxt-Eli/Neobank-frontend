@@ -1,4 +1,3 @@
-
 import HomeScreen from "./homescreen";
 import StatisticsScreen from "./Statistics";
 import Login from "./Login";
@@ -38,7 +37,7 @@ export default function TabNavigator() {
                 component={Profile} 
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="person" size={size} color={color}/>
+                        <Ionicons name="business" size={size} color={color}/>
                     ), 
                 }}
             />

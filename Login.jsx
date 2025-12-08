@@ -1,12 +1,14 @@
+/*LOGIN SCREEN*/
 import { Text, View, TextInput } from 'react-native';
 import { useState } from 'react';
 
 import { AuthButtons } from './authscreen';
 import styles from './credstyles';  
+import setAuthd from './RootNavigator'; 
 
 
 
-export default function Login({ navigation }) {
+export default function Login({ navigation, setAuthd }) {
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,14 +16,17 @@ export default function Login({ navigation }) {
   
   
   const handleLogin = () => {
-    setStatus("Logging in...");
+    if (email === '' || password === '') {
+        setStatus("Please fill all fields");
+        return;
+    }
     
-    // simulate API call with setTimeout (pretend delay)
+    setStatus("Logging in...");
     setTimeout(() => {
-      setStatus("LoginSuccessful!"); 
+        setStatus("Login Successful!");
+        setAuthd(true);  // ← THIS switches to main app
     }, 2000);
-  };
-
+};
 
   return (
     <View style={styles.container}>

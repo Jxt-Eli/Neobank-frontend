@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ScrollView, Text, Pressable } from "react-native";
+import { View, ScrollView, Text, } from "react-native";
 import styles from "./Depositstyles";
 
 export default function DepositScreen() {
