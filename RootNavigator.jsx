@@ -14,7 +14,7 @@ export default function RootNavigator() {
 
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-
+            {/* This thing has really given me shit. Next time I find myself in this situation, Im using conditional rendering. FUCK THIS!!! */}
             { authd ? (
 
                 <Stack.Screen name='App Screens' component={TabNavigator} />
