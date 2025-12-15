@@ -8,7 +8,6 @@ import styles from './credstyles';
 
 
 export default function Login({ navigation, setAuthd }) {
-  console.log("setAuthd is", setAuthd)
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
